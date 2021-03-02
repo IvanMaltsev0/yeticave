@@ -2,8 +2,7 @@
 $is_auth = rand(0, 1);
 
 $user_name = ''; // укажите здесь ваше имя
-?>
-<?php
+
 $categories_list = [
     'boards and skis' => 'Доски и лыжи',
     'Fasteners' => 'Крепления',
