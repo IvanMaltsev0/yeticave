@@ -69,3 +69,5 @@ ALTER TABLE lots
 
 ALTER TABLE bids
     ADD CONSTRAINT  bids_fk1 FOREIGN KEY (user_id) REFERENCES  users(user_id);
+
+
