@@ -13,7 +13,7 @@ function sum_format($number)
     }
 
     if($f==true){
-        return $price_n. '<b class=\"rub\">p</b>';
+        return $price_n. '<b class=\"rub\"></b>';
     }
     else{
         return $price_n;

@@ -1,6 +1,6 @@
 CREATE TABLE categories
 (
-    categ_id int AUTO_INCREMENT,
+    categ_id varchar(100),
     categ_name varchar(50),
     CONSTRAINT categ_primary PRIMARY KEY(categ_id,categ_name)
 );
@@ -15,12 +15,12 @@ CREATE TABLE lots
     lot_user_id int,
     lot_winner_id int,
     lot_name varchar(50),
-    lot_cated_id int,
+    lot_cated_id varchar(100),
     lot_discr text,
     lot_image text,
     lot_cr_date datetime,
     lot_comp_date datetime,
-    lot_stert_prise int,
+    lot_start_prise int,
     lot_step int
 );
 

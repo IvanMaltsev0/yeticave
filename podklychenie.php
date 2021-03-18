@@ -3,7 +3,7 @@ $is_auth = rand(0, 1);
 
 $user_name = 'IvanMaltsev'; // укажите здесь ваше имя
 
-$categories_list = [
+/*$categories_list = [
     'boards and skis' => 'Доски и лыжи',
     'Fasteners' => 'Крепления',
     'boots' => 'Ботинки',
@@ -49,13 +49,21 @@ $data_list = [
         'price' => '5400',
         'pictures' => 'img/lot-6.jpg',
     ]
-];
+];*/
 
 $con = mysqli_connect('127.0.0.1', 'root', '', 'yeticave');
 $sql = 'SELECT * FROM categories';
-$result = mysqli_query($con, $sql);
-if($result){
+$categories_list = mysqli_query($con, $sql);
+if($categories_list){
+    echo mysqli_error($con);
+}
+$categories_list = mysqli_fetch_all($categories_list, MYSQLI_ASSOC);
+
+$sql1 = 'SELECT * FROM lots';
+$data_list = mysqli_query($con, $sql1);
+if($data_list){
     echo mysqli_error($con);
 }
 
-$categories_list = mysqli_fetch_all($result, MYSQLI_ASSOC);
+$data_list = mysqli_fetch_all($data_list, MYSQLI_ASSOC);
+?>;

@@ -21,6 +21,5 @@ $layout_content = compile_template(
 
 print($layout_content);
 
-
 ?>;
 
