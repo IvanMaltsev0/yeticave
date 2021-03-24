@@ -1,6 +1,6 @@
 <?php
 require_once('functions.php');
-require 'data.php';
+require 'podklychenie.php';
 
 
 if(isset($_GET['id'])){
